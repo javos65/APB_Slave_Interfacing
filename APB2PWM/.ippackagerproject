@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<ippackgerproject version="1.0">
+    <filegroups>
+        <filegroup filetype="metadata">
+            <file path="metadata.xml"/>
+        </filegroup>
+        <filegroup filetype="sub_metadata">
+            <file path="bus_interface.xml"/>
+            <file path="memory_map.xml"/>
+        </filegroup>
+        <filegroup filetype="rtl">
+            <file type="vhdl" path="rtl/APB2PWM_top.vhd" lib="" encryption="0"/>
+            <file type="verilog" path="rtl/led_pwm.v" encryption="0"/>
+        </filegroup>
+        <filegroup filetype="doc">
+            <file path="doc/introduction.html"/>
+        </filegroup>
+        <filegroup filetype="key">
+            <file path="../../../../../lscc/propel/2024.1/builder/rtf/ispfpga/data/key.txt"/>
+        </filegroup>
+        <filegroup filetype="eula">
+            <file path="doc/EULA.txt"/>
+        </filegroup>
+    </filegroups>
+</ippackgerproject>

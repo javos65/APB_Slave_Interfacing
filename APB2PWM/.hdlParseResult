@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<lscc:hdlparseresult version="1.0">
+    <modules>
+        <module name="apb_to_mem">
+            <ports>
+                <port name="clk_i" dir="in"/>
+                <port name="rst_n_i" dir="in"/>
+                <port name="PSEL" dir="in"/>
+                <port name="PENABLE" dir="in"/>
+                <port name="PADDR" dir="in" range="(7,0)"/>
+                <port name="PWRITE" dir="in"/>
+                <port name="PWDATA" dir="in" range="(31,0)"/>
+                <port name="PRDATA" dir="out" range="(31,0)"/>
+                <port name="PREADY" dir="out"/>
+                <port name="PSLVERR" dir="out"/>
+                <port name="PWM0OUT" dir="out"/>
+                <port name="PWM1OUT" dir="out"/>
+            </ports>
+        </module>
+    </modules>
+</lscc:hdlparseresult>
