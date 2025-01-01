@@ -9,7 +9,7 @@
             <file path="memory_map.xml"/>
         </filegroup>
         <filegroup filetype="rtl">
-            <file type="vhdl" path="rtl/APB2PWM_top.vhd" lib="" encryption="0"/>
+            <file type="vhdl" lib="" path="rtl/APB2PWM_top.vhd" encryption="0"/>
             <file type="verilog" path="rtl/led_pwm.v" encryption="0"/>
         </filegroup>
         <filegroup filetype="doc">

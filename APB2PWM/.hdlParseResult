@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <lscc:hdlparseresult version="1.0">
     <modules>
-        <module name="apb_to_mem">
+        <module name="apb_to_pwm">
             <ports>
                 <port name="clk_i" dir="in"/>
                 <port name="rst_n_i" dir="in"/>

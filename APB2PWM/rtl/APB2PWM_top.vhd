@@ -6,7 +6,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity apb_to_mem is
+entity apb_to_pwm is
    port (
       -- clk_i and rst_n_i are kept out of standard APB SLAVE I/F
       clk_i   : in  std_logic; -- PCLK
@@ -24,9 +24,9 @@ entity apb_to_mem is
 	  PWM1OUT : out std_logic
 	  
    );
-end apb_to_mem;
+end apb_to_pwm;
 
-architecture rtl_apb_to_mem of apb_to_mem is
+architecture rtl_apb_to_pwm of apb_to_pwm is
     signal MEM_ADDR : std_logic_vector(3 downto 0) ; 
 	signal REG0_ADDR : std_logic_vector(31 downto 0) ; -- Duty cycle PWM0
 	signal REG1_ADDR : std_logic_vector(31 downto 0) ; -- Control register PWM0, bit0 = enable
@@ -172,4 +172,4 @@ begin
       end if;
    end process FSM_PROC;
 
-end rtl_apb_to_mem;
+end rtl_apb_to_pwm;
