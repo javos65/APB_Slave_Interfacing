@@ -1,29 +1,68 @@
-<HEAD>
-  <TITLE>APB TO RAM macro/IP</TITLE>
-</HEAD>
-
-<BODY>
-  <H1>APB TO RAM macro/IP</H1>
-
-  <H2>Description</H2>
-  <P>Created for LAB2</P>
-
-  <H2>Devices Supported</H2>
-  <P>CERTUS PRO NX</P>
-
-  <H2>References</H2>
-  <UL>
-    <P>
-     <LI><A HREF="http://www.latticesemi.com/view_document?document_id=52684" CLASS="URL">User Guide</A>
-  </UL>
-
-  <H2>Revision History</H2>
-  <TABLE cellpadding="10">
-    <TR>
-	<TR>
-	  <TD><table cellpadding="10"><tr><td><b>1.0</b></td><td>Firt release</td></tr></table></TD>
-	</TR>
-	
-    </TR>
-  </TABLE>
-</BODY>
+<HEAD>
+
+  <TITLE>APB TO ADC macro/IP</TITLE>
+
+</HEAD>
+
+
+
+<BODY>
+
+  <H1>APB TO ADC macro/IP</H1>
+
+
+
+  <H2>Description</H2>
+
+  <P>Created for LAB12 : Continous ADC, 50Mhz ADC speed, 50MHz state machine<BR>
+  ADCBLOCK.v created with Radiant IP library creator : ADC_core, Vref 1.2V, Divider:2 <BR>
+  ADC clock : 50Mhz, from osc4, PLL on Lower-right Mapped<BR><BR>
+   
+  Interface:<BR><BR>
+  Address 0x0000 = ADC0 Result [11:0] (DP0) - read only<BR>
+  Address 0x0004 = ADC0 Select[3:0]- read/write<BR>
+  Address 0x0008 = ADC1 Result [11:0] (DP1) - read only<BR>
+  Address 0x000c = ADC1 Select[3:0]- read/writey<BR><BR>
+  Select[3:0] : 0xB = cP0 / CP1 for both channels. : 0xA = DTR for channel1<BR>
+  </P>
+
+
+
+  <H2>Devices Supported</H2>
+
+  <P>CERTUS PRO NX</P>
+
+
+
+  <H2>References ADC IP:</H2>
+
+  <UL>
+
+    <P>
+
+     <LI><A HREF="http://www.latticesemi.com/view_document?document_id=53427" CLASS="URL">User Guide</A>
+
+  </UL>
+
+
+
+  <H2>Revision History</H2>
+
+  <TABLE cellpadding="10">
+
+    <TR>
+
+	<TR>
+
+	  <TD><table cellpadding="10"><tr><td><b>1.0</b></td><td>Firt release</td></tr></table></TD>
+
+	</TR>
+
+	
+
+    </TR>
+
+  </TABLE>
+
+</BODY>
+

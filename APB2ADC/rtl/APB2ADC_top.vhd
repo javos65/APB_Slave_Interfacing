@@ -34,16 +34,16 @@ end apb_to_adc;
 
 architecture rtl_apb_to_adc of apb_to_adc is
 	signal MEM_ADDR : std_logic_vector(3 downto 0) ; 
-	signal REG0_ADDR : std_logic_vector(31 downto 0) ; -- ADC0 - result
+	--signal REG0_ADDR : std_logic_vector(31 downto 0) ; -- ADC0 - result
 	signal REG1_ADDR : std_logic_vector(31 downto 0) ; -- ADC0 - select
-	signal REG2_ADDR : std_logic_vector(31 downto 0) ; -- ADC1 - result
+	--signal REG2_ADDR : std_logic_vector(31 downto 0) ; -- ADC1 - result
 	signal REG3_ADDR : std_logic_vector(31 downto 0) ; -- ADC1 - select
 
 	-- declare external ADC block
 	component adc_fsm 
 		port(
-		ADC_0_12BIT : out  	std_logic_vector(11 downto 0);
-		ADC_1_12BIT : out  	std_logic_vector(11 downto 0); 
+		ADC0_12BIT : out  	std_logic_vector(11 downto 0);
+		ADC1_12BIT : out  	std_logic_vector(11 downto 0); 
 		ADC0_SELECT : in 	std_logic_vector(3 downto 0); 	
 		ADC1_SELECT : in 	std_logic_vector(3 downto 0); 	 	
 		
@@ -60,9 +60,20 @@ architecture rtl_apb_to_adc of apb_to_adc is
 		);
 	end component;	
 
+   -- map 12 bit to 32 bit interfaces
+   signal adc0_result : std_logic_vector(11 downto 0);
+   signal adc1_result : std_logic_vector(11 downto 0);
+   signal adc0_result_all : std_logic_vector(31 downto 0);
+   signal adc1_result_all : std_logic_vector(31 downto 0);
+
+   adc0_result_all (31 downto 12) <= 0;
+   adc0_result_all (11 downto 0) <= signal adc0_result;
+   adc1_result_all (31 downto 12) <= 0;
+   adc1_result_all (11 downto 0) <= signal adc1_result;
 
    type fsm_state is (IDLE_ST, SETUP_ST, WAIT_CYCLE_0_ST, WAIT_CYCLE_1_ST);
    signal fsm_st : fsm_state;
+
 
 begin
 	
@@ -70,8 +81,8 @@ begin
     -- assign ADC block
 	ADC_BLOCK_INST: adc_fsm
 		port map(
-		ADC_0_12BIT  => REG0_ADDR(11 downto 0),
-		ADC_1_12BIT  => REG2_ADDR(11 downto 0),
+		ADC0_12BIT  => adc0_result,
+		ADC1_12BIT  => adc1_result,
 		ADC0_SELECT  => REG1_ADDR(3 downto 0),	
 		ADC1_SELECT  => REG3_ADDR(3 downto 0), 	
 		ADC_DN0  => adc_dn0,
@@ -79,7 +90,7 @@ begin
 		ADC_DN1  => adc_dn1,
 		ADC_DP1  => adc_dp1,
 		alive_o  => alive,
-		pll_pclk_50MHz_w	 => pll_fsm_i,
+		pll_pclk_50MHz_w  => pll_fsm_i,
 		pll_sclk4_50MHz_w => pll_adc_i,
 		pll_lock_w	=> pll_lock_i,
 		resetn_i => rst_n_i
@@ -156,11 +167,11 @@ begin
 						-------------------
 							case MEM_ADDR is
 								when "0000" =>
-									PRDATA <= REG0_ADDR;
+									PRDATA <= adc0_result_all;
 								when "0100" =>
 									PRDATA <= REG1_ADDR;
 								when "1000" =>
-									PRDATA <= REG2_ADDR;									
+									PRDATA <= adc1_result_all;									
 								when "1100" =>
 									PRDATA <= REG3_ADDR ;
 								when others => null;										

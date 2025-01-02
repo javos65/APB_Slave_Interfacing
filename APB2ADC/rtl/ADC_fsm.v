@@ -1,7 +1,7 @@
 (* ORIG_MODULE_NAME="adc_fsm", LATTICE_IP_GENERATED="0" *) module adc_fsm (
     // Data interfacing
-	output   [11:0]	ADC_0_12BIT, 
-	output   [11:0]	ADC_1_12BIT, 
+	output   [11:0]	ADC0_12BIT, 
+	output   [11:0]	ADC1_12BIT, 
 	input    [3:0]	ADC0_SELECT, 	
 	input    [3:0]	ADC1_SELECT, 	
 	// Analog IO

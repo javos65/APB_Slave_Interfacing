@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<lscc:hdlparseresult version="1.0">
+    <modules>
+        <module name="adc_fsm">
+            <ports>
+                <port dir="out" range="(11,0)" name="ADC0_12BIT"/>
+                <port dir="out" range="(11,0)" name="ADC1_12BIT"/>
+                <port dir="in" range="(3,0)" name="ADC0_SELECT"/>
+                <port dir="in" range="(3,0)" name="ADC1_SELECT"/>
+                <port dir="in" name="ADC_DN0"/>
+                <port dir="in" name="ADC_DP0"/>
+                <port dir="in" name="ADC_DN1"/>
+                <port dir="in" name="ADC_DP1"/>
+                <port dir="out" name="alive_o"/>
+                <port dir="in" name="pll_pclk_50MHz_w"/>
+                <port dir="in" name="pll_sclk4_50MHz_w"/>
+                <port dir="in" name="pll_lock_w"/>
+                <port dir="in" name="resetn_i"/>
+            </ports>
+        </module>
+    </modules>
+</lscc:hdlparseresult>
