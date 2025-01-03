@@ -67,14 +67,14 @@ localparam ADC_ST_UPDATE			= 10'b1000000000;
 
 always @(posedge adc_fab_clk_w or negedge resetn_i) begin
 	if(~resetn_i) begin
-		adc_state_r			<= ADC_ST_ENABLE;
-		adc0_result_r		<= 12'h001;
-		adc1_result_r		<= 12'h800;
+		adc_state_r		<= ADC_ST_ENABLE;
+		adc0_result_r	<= 12'h003;
+		adc1_result_r	<= 12'hc00;
 		adc_start_cnvt_r	<= 1'b0;
-		adc_start_cal_r		<= 1'b0;
+		adc_start_cal_r	<= 1'b0;
 		adc_resetn_r		<= 1'b0;
 		adc_enable_r		<= 1'b0;
-		adc_delay_r			<= ADC_DELAY_ZERO;
+		adc_delay_r		<= ADC_DELAY_ZERO;
 	end
 
 	else begin
@@ -169,11 +169,13 @@ always @(posedge pll_pclk_50MHz_w) begin
 		 cycle_counter = 0;
 		end
 	else begin
+		if (pll_lock_w) begin
 		cycle_counter = cycle_counter+1; // counting
 			if (cycle_counter[25]==1)
 				blink_out = 0;
 			else
 				blink_out=1;
+			end	
 		end
 end
 

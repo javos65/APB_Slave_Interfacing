@@ -3,16 +3,14 @@
     <lsccip:general>
         <lsccip:vendor>JayFox</lsccip:vendor>
         <lsccip:library>my_ip</lsccip:library>
-        <lsccip:name>APB2ADC</lsccip:name>
-        <lsccip:display_name>APB2ADC</lsccip:display_name>
-        <lsccip:version>1.2.0</lsccip:version>
+        <lsccip:name>APB_2_ADC</lsccip:name>
+        <lsccip:display_name>APB_2_ADC</lsccip:display_name>
+        <lsccip:version>1.1.0</lsccip:version>
         <lsccip:category>my_cat</lsccip:category>
         <lsccip:min_radiant_version>2024.1</lsccip:min_radiant_version>
         <lsccip:min_esi_version>2024.1</lsccip:min_esi_version>
         <lsccip:supported_products>
             <lsccip:supported_family name="*" />
-            <lsccip:supported_family name="LFCPNX" />
-            <lsccip:supported_family name="LFD2NX" />
         </lsccip:supported_products>
         <lsccip:supported_platforms>
             <lsccip:supported_platform name="esi" />
@@ -49,7 +47,7 @@
         <lsccip:port name="PADDR"
                      dir="in"
                      conn_mod="apb_to_adc"
-                     range="(7,0)"
+                     range="(3,0)"
                      bus_interface="APB_S0"
          />
         <lsccip:port name="PWRITE"

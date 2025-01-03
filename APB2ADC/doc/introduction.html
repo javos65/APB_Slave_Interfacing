@@ -14,25 +14,23 @@
 
   <H2>Description</H2>
 
-  <P>Created for LAB12 : Continous ADC, 50Mhz ADC speed, 50MHz state machine<BR>
-  ADCBLOCK.v created with Radiant IP library creator : ADC_core, Vref 1.2V, Divider:2 <BR>
-  ADC clock : 50Mhz, from osc4, PLL on Lower-right Mapped<BR><BR>
+  <P>Created for LAB12 : Continous ADC, example taken from CertusProNX Versa Board<BR>
+  ADCBLOCK.v created with Radiant IP library creator : ADC_core, external Vref 1.2V, Divider:2 <BR><BR>
+  Contrain1 : ADC clock should be equal Fab Clock : example 50Mhz for 1Mbsamp/s <BR>
+  Contrain2 : ADC clock must be from osc4, AND PLL on Lower-Right Mapped<BR>
+  Contrain3 : Top level design requires Analog IO names to be ADC_DP0  ADC_DN0 , ADC_DP1 / ADC_DN1 for right analog port mapping  <BR><BR>
    
-  Interface:<BR><BR>
+  APB Memory Interface:<BR><BR>
   Address 0x0000 = ADC0 Result [11:0] (DP0) - read only<BR>
   Address 0x0004 = ADC0 Select[3:0]- read/write<BR>
   Address 0x0008 = ADC1 Result [11:0] (DP1) - read only<BR>
   Address 0x000c = ADC1 Select[3:0]- read/writey<BR><BR>
-  Select[3:0] : 0xB = cP0 / CP1 for both channels. : 0xA = DTR for channel1<BR>
+  Select[3:0] : 0xB = cP0 / CP1 for both channels. : 0xA = DTR for channel1<BR><BR>
   </P>
-
-
 
   <H2>Devices Supported</H2>
 
-  <P>CERTUS PRO NX</P>
-
-
+  <P>CERTUS PRO NX / CERTUS NX / CROSSLINK NX</P>
 
   <H2>References ADC IP:</H2>
 

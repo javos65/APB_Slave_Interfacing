@@ -14,7 +14,7 @@ entity apb_to_adc is
       -- clk_i and rst_n_i are kept out of standard APB SLAVE I/F
       PSEL    : in  std_logic;
       PENABLE : in  std_logic;
-      PADDR   : in  std_logic_vector(7 downto 0);
+      PADDR   : in  std_logic_vector(3 downto 0);
       PWRITE  : in  std_logic;
       PWDATA  : in  std_logic_vector(31 downto 0);
       PRDATA  : out std_logic_vector(31 downto 0);
@@ -34,9 +34,9 @@ end apb_to_adc;
 
 architecture rtl_apb_to_adc of apb_to_adc is
 	signal MEM_ADDR : std_logic_vector(3 downto 0) ; 
-	--signal REG0_ADDR : std_logic_vector(31 downto 0) ; -- ADC0 - result
+	--signal REG0_ADDR : std_logic_vector(31 downto 0) ; -- ADC0 - result - read only, no write re
 	signal REG1_ADDR : std_logic_vector(31 downto 0) ; -- ADC0 - select
-	--signal REG2_ADDR : std_logic_vector(31 downto 0) ; -- ADC1 - result
+	--signal REG2_ADDR : std_logic_vector(31 downto 0) ; -- ADC1 - result - read only, no write reg requored
 	signal REG3_ADDR : std_logic_vector(31 downto 0) ; -- ADC1 - select
 
 	-- declare external ADC block
