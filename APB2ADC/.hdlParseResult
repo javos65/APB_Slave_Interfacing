@@ -1,21 +1,26 @@
 <?xml version="1.0"?>
 <lscc:hdlparseresult version="1.0">
     <modules>
-        <module name="adc_fsm">
+        <module name="apb_to_adc">
             <ports>
-                <port dir="out" range="(11,0)" name="ADC0_12BIT"/>
-                <port dir="out" range="(11,0)" name="ADC1_12BIT"/>
-                <port dir="in" range="(3,0)" name="ADC0_SELECT"/>
-                <port dir="in" range="(3,0)" name="ADC1_SELECT"/>
-                <port dir="in" name="ADC_DN0"/>
-                <port dir="in" name="ADC_DP0"/>
-                <port dir="in" name="ADC_DN1"/>
-                <port dir="in" name="ADC_DP1"/>
-                <port dir="out" name="alive_o"/>
-                <port dir="in" name="pll_pclk_50MHz_w"/>
-                <port dir="in" name="pll_sclk4_50MHz_w"/>
-                <port dir="in" name="pll_lock_w"/>
-                <port dir="in" name="resetn_i"/>
+                <port dir="in" name="clk_i"/>
+                <port dir="in" name="rst_n_i"/>
+                <port dir="in" name="PSEL"/>
+                <port dir="in" name="PENABLE"/>
+                <port dir="in" range="(7,0)" name="PADDR"/>
+                <port dir="in" name="PWRITE"/>
+                <port dir="in" range="(31,0)" name="PWDATA"/>
+                <port dir="out" range="(31,0)" name="PRDATA"/>
+                <port dir="out" name="PREADY"/>
+                <port dir="out" name="PSLVERR"/>
+                <port dir="out" name="alive"/>
+                <port dir="in" name="pll_adc_i"/>
+                <port dir="in" name="pll_fsm_i"/>
+                <port dir="in" name="pll_lock_i"/>
+                <port dir="in" name="adc_dn0"/>
+                <port dir="in" name="adc_dn1"/>
+                <port dir="in" name="adc_dp0"/>
+                <port dir="in" name="adc_dp1"/>
             </ports>
         </module>
     </modules>

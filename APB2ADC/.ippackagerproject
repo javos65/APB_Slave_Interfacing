@@ -9,9 +9,9 @@
             <file path="memory_map.xml"/>
         </filegroup>
         <filegroup filetype="rtl">
-            <file lib="" path="rtl/APB2ADC_top.vhd" encryption="0" type="vhdl"/>
-            <file path="rtl/ADC_fsm.v" encryption="0" type="verilog"/>
-            <file path="rtl/ADCBLOCK.v" encryption="0" type="verilog"/>
+            <file type="verilog" encryption="0" path="rtl/ADC_fsm.v"/>
+            <file type="verilog" encryption="0" path="rtl/ADCBLOCK.v"/>
+            <file type="vhdl" encryption="0" path="rtl/APB2ADC_top.vhd" lib=""/>
         </filegroup>
         <filegroup filetype="doc">
             <file path="doc/introduction.html"/>

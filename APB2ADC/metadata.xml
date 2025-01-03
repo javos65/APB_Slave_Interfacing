@@ -12,6 +12,7 @@
         <lsccip:supported_products>
             <lsccip:supported_family name="*" />
             <lsccip:supported_family name="LFCPNX" />
+            <lsccip:supported_family name="LFD2NX" />
         </lsccip:supported_products>
         <lsccip:supported_platforms>
             <lsccip:supported_platform name="esi" />
@@ -22,93 +23,93 @@
         <lsccip:setting id="__dummy__"
                         type="param"
                         value_type="string"
-                        conn_mod="adc_fsm"
+                        conn_mod="apb_to_adc"
                         hidden="True"
          />
     </lsccip:settings>
     <lsccip:ports>
         <lsccip:port name="clk_i"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
          />
         <lsccip:port name="rst_n_i"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
          />
         <lsccip:port name="PSEL"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
                      bus_interface="APB_S0"
          />
         <lsccip:port name="PENABLE"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
                      bus_interface="APB_S0"
          />
         <lsccip:port name="PADDR"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
                      range="(7,0)"
                      bus_interface="APB_S0"
          />
         <lsccip:port name="PWRITE"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
                      bus_interface="APB_S0"
          />
         <lsccip:port name="PWDATA"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
                      range="(31,0)"
                      bus_interface="APB_S0"
          />
         <lsccip:port name="PRDATA"
                      dir="out"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
                      range="(31,0)"
                      bus_interface="APB_S0"
          />
         <lsccip:port name="PREADY"
                      dir="out"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
                      bus_interface="APB_S0"
          />
         <lsccip:port name="PSLVERR"
                      dir="out"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
                      bus_interface="APB_S0"
          />
         <lsccip:port name="alive"
                      dir="out"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
          />
         <lsccip:port name="pll_adc_i"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
          />
         <lsccip:port name="pll_fsm_i"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
          />
         <lsccip:port name="pll_lock_i"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
          />
         <lsccip:port name="adc_dn0"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
          />
         <lsccip:port name="adc_dn1"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
          />
         <lsccip:port name="adc_dp0"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
          />
         <lsccip:port name="adc_dp1"
                      dir="in"
-                     conn_mod="adc_fsm"
+                     conn_mod="apb_to_adc"
          />
     </lsccip:ports>
     <xi:include parse="xml" href="bus_interface.xml" />

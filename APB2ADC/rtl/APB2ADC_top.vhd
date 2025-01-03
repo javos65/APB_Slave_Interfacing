@@ -60,23 +60,23 @@ architecture rtl_apb_to_adc of apb_to_adc is
 		);
 	end component;	
 
-   -- map 12 bit to 32 bit interfaces
+   -- signals to map 12 bit to 32 bit interfaces
    signal adc0_result : std_logic_vector(11 downto 0);
    signal adc1_result : std_logic_vector(11 downto 0);
    signal adc0_result_all : std_logic_vector(31 downto 0);
    signal adc1_result_all : std_logic_vector(31 downto 0);
-
-   adc0_result_all (31 downto 12) <= 0;
-   adc0_result_all (11 downto 0) <= signal adc0_result;
-   adc1_result_all (31 downto 12) <= 0;
-   adc1_result_all (11 downto 0) <= signal adc1_result;
 
    type fsm_state is (IDLE_ST, SETUP_ST, WAIT_CYCLE_0_ST, WAIT_CYCLE_1_ST);
    signal fsm_st : fsm_state;
 
 
 begin
-	
+
+   adc0_result_all (11 downto 0) <= adc0_result;
+   adc0_result_all (31 downto 12) <= x"00000";
+   adc1_result_all (31 downto 12) <= x"00000";
+   adc1_result_all (11 downto 0) <= adc1_result;
+
     MEM_ADDR <= PADDR(3 downto 0); -- split of lower 3 bits of the bus
     -- assign ADC block
 	ADC_BLOCK_INST: adc_fsm
