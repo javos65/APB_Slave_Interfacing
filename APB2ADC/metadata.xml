@@ -3,14 +3,19 @@
     <lsccip:general>
         <lsccip:vendor>JayFox</lsccip:vendor>
         <lsccip:library>my_ip</lsccip:library>
-        <lsccip:name>APB_2_ADC</lsccip:name>
-        <lsccip:display_name>APB_2_ADC</lsccip:display_name>
-        <lsccip:version>1.1.0</lsccip:version>
-        <lsccip:category>my_cat</lsccip:category>
+        <lsccip:name>nexus_adc</lsccip:name>
+        <lsccip:display_name>nexus_adc</lsccip:display_name>
+        <lsccip:version>2.0.0</lsccip:version>
+        <lsccip:category>interfacing</lsccip:category>
+        <lsccip:keywords>adc</lsccip:keywords>
         <lsccip:min_radiant_version>2024.1</lsccip:min_radiant_version>
         <lsccip:min_esi_version>2024.1</lsccip:min_esi_version>
         <lsccip:supported_products>
             <lsccip:supported_family name="*" />
+            <lsccip:supported_family name="LFCPNX" />
+            <lsccip:supported_family name="LFD2NX" />
+            <lsccip:supported_family name="LFMXO5" />
+            <lsccip:supported_family name="LIFCL" />
         </lsccip:supported_products>
         <lsccip:supported_platforms>
             <lsccip:supported_platform name="esi" />
@@ -47,7 +52,7 @@
         <lsccip:port name="PADDR"
                      dir="in"
                      conn_mod="apb_to_adc"
-                     range="(3,0)"
+                     range="(7,0)"
                      bus_interface="APB_S0"
          />
         <lsccip:port name="PWRITE"

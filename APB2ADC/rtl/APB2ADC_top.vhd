@@ -14,7 +14,7 @@ entity apb_to_adc is
       -- clk_i and rst_n_i are kept out of standard APB SLAVE I/F
       PSEL    : in  std_logic;
       PENABLE : in  std_logic;
-      PADDR   : in  std_logic_vector(3 downto 0);
+      PADDR   : in  std_logic_vector(7 downto 0);
       PWRITE  : in  std_logic;
       PWDATA  : in  std_logic_vector(31 downto 0);
       PRDATA  : out std_logic_vector(31 downto 0);
@@ -33,10 +33,10 @@ entity apb_to_adc is
 end apb_to_adc;
 
 architecture rtl_apb_to_adc of apb_to_adc is
-	signal MEM_ADDR : std_logic_vector(3 downto 0) ; 
-	--signal REG0_ADDR : std_logic_vector(31 downto 0) ; -- ADC0 - result - read only, no write re
+	signal MEM_ADDR : std_logic_vector(2 downto 0) ; 
+	--signal REG0_ADDR : std_logic_vector(31 downto 0) ; -- ADC0 - result - read only, no write 
 	signal REG1_ADDR : std_logic_vector(31 downto 0) ; -- ADC0 - select
-	--signal REG2_ADDR : std_logic_vector(31 downto 0) ; -- ADC1 - result - read only, no write reg requored
+	--signal REG2_ADDR : std_logic_vector(31 downto 0) ; -- ADC1 - result - read only, no write 
 	signal REG3_ADDR : std_logic_vector(31 downto 0) ; -- ADC1 - select
 
 	-- declare external ADC block
@@ -77,7 +77,7 @@ begin
    adc1_result_all (31 downto 12) <= x"00000";
    adc1_result_all (11 downto 0) <= adc1_result;
 
-    MEM_ADDR <= PADDR(3 downto 0); -- split of lower 3 bits of the bus
+    MEM_ADDR <= PADDR(4 downto 2); -- split of 3 bits of the bus, lower 2 bis unused due to longword adressing
     -- assign ADC block
 	ADC_BLOCK_INST: adc_fsm
 		port map(
@@ -124,11 +124,11 @@ begin
 
 						-- WRITE
 						if (PWRITE = '1') then
-							-- WRITE transfer  - no write to address 0 and 8, aadres 4 and c are ADC_select
+							-- WRITE transfer  - no write to address 4 and c, aadres 8 and 10 are ADC_select
 							case MEM_ADDR is
-								when "0100" =>
+								when "010" =>
 									REG1_ADDR  <= PWDATA;
-								when "1100" =>
+								when "100" =>
 									REG3_ADDR  <= PWDATA;
 								when others => null;						
 							end case	;		
@@ -166,13 +166,15 @@ begin
 						-- WAIT state, READ
 						-------------------
 							case MEM_ADDR is
-								when "0000" =>
+								when "000" => 	-- Address 0 = ID is 0xB19B00B3 - 32 bits, hard coded
+									PRDATA <= x"B19B00B3";							
+								when "001" =>
 									PRDATA <= adc0_result_all;
-								when "0100" =>
+								when "010" =>
 									PRDATA <= REG1_ADDR;
-								when "1000" =>
+								when "011" =>
 									PRDATA <= adc1_result_all;									
-								when "1100" =>
+								when "100" =>
 									PRDATA <= REG3_ADDR ;
 								when others => null;										
 							end case	;

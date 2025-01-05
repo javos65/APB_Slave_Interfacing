@@ -3,24 +3,24 @@
     <modules>
         <module name="apb_to_adc">
             <ports>
-                <port name="clk_i" dir="in"/>
-                <port name="rst_n_i" dir="in"/>
-                <port name="PSEL" dir="in"/>
-                <port name="PENABLE" dir="in"/>
-                <port range="(3,0)" name="PADDR" dir="in"/>
-                <port name="PWRITE" dir="in"/>
-                <port range="(31,0)" name="PWDATA" dir="in"/>
-                <port range="(31,0)" name="PRDATA" dir="out"/>
-                <port name="PREADY" dir="out"/>
-                <port name="PSLVERR" dir="out"/>
-                <port name="alive" dir="out"/>
-                <port name="pll_adc_i" dir="in"/>
-                <port name="pll_fsm_i" dir="in"/>
-                <port name="pll_lock_i" dir="in"/>
-                <port name="adc_dn0" dir="in"/>
-                <port name="adc_dn1" dir="in"/>
-                <port name="adc_dp0" dir="in"/>
-                <port name="adc_dp1" dir="in"/>
+                <port dir="in" name="clk_i"/>
+                <port dir="in" name="rst_n_i"/>
+                <port dir="in" name="PSEL"/>
+                <port dir="in" name="PENABLE"/>
+                <port dir="in" range="(7,0)" name="PADDR"/>
+                <port dir="in" name="PWRITE"/>
+                <port dir="in" range="(31,0)" name="PWDATA"/>
+                <port dir="out" range="(31,0)" name="PRDATA"/>
+                <port dir="out" name="PREADY"/>
+                <port dir="out" name="PSLVERR"/>
+                <port dir="out" name="alive"/>
+                <port dir="in" name="pll_adc_i"/>
+                <port dir="in" name="pll_fsm_i"/>
+                <port dir="in" name="pll_lock_i"/>
+                <port dir="in" name="adc_dn0"/>
+                <port dir="in" name="adc_dn1"/>
+                <port dir="in" name="adc_dp0"/>
+                <port dir="in" name="adc_dp1"/>
             </ports>
         </module>
     </modules>

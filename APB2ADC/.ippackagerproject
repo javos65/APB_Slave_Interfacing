@@ -9,9 +9,13 @@
             <file path="memory_map.xml"/>
         </filegroup>
         <filegroup filetype="rtl">
-            <file type="verilog" path="rtl/ADC_fsm.v" encryption="0"/>
-            <file type="verilog" path="rtl/ADCBLOCK.v" encryption="0"/>
-            <file lib="" type="vhdl" path="rtl/APB2ADC_top.vhd" encryption="0"/>
+            <file path="rtl/ADC_fsm.v" type="verilog" encryption="0"/>
+            <file path="rtl/ADCBLOCK.v" type="verilog" encryption="0"/>
+            <file path="rtl/APB2ADC_top.vhd" lib="" type="vhdl" encryption="0"/>
+        </filegroup>
+        <filegroup filetype="driver">
+            <file path="../c-files/nexus_adc.c"/>
+            <file path="../c-files/nexus_adc.h"/>
         </filegroup>
         <filegroup filetype="doc">
             <file path="doc/introduction.html"/>
