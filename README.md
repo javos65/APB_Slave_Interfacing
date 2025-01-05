@@ -3,7 +3,7 @@
  Peripheral interface for Soft RiscV processor<br>
  Build with Lattice IP Packager<br><br>
 
-![logo](/images/Base_Circuit.jpg?raw=true)
+![logo](/Images/Base_Circuit.jpg?raw=true)
 <BR>
 
  # Generated IPX IP libraries :<br>
