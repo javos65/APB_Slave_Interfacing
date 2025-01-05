@@ -7,8 +7,8 @@
 <BR>
 
  # Generated IPX IP libraries :<br>
- APB to Local Memory (example code for 4 memory mapped locations)<br>
- APB to PWM (dual PWM, 16bit counter, 4 registers meory mapped)<br>
+ APB to LocalMemory (example code for 7 memory mapped locations)<br>
+ APB to PWM (quad PWM, 16bitsr, 4 registers memory mapped)<br>
  APB to ADC (Dual ADC, continous conversion, 1.2V Vref, 4 Memory mapped locations) <br><br>
  Tested with MAS Educational Board -> link[https://maselettronica.com/product/mas-educational-board-certus-pro-nx/?lang=en]<BR>
 
