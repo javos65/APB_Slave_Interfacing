@@ -1,7 +1,7 @@
 -- --------------------------------------------------------------------
--- Revision History :
+-- Revision History : 1.0.0
 -- --------------------------------------------------------------------
--- Revision 1.0  1971-07-11
+-- Example code IP Pacakger LAttice Propel APB Bus
 -- --------------------------------------------------------------------
 library ieee;
 use ieee.std_logic_1164.all;
@@ -24,18 +24,21 @@ entity apb_to_mem is
 end apb_to_mem;
 
 architecture rtl_apb_to_mem of apb_to_mem is
-    signal MEM_ADDR : std_logic_vector(3 downto 0) ; 
-	signal REG0_ADDR : std_logic_vector(31 downto 0) ;
+    signal MEM_ADDR : std_logic_vector(2 downto 0) ; 		-- use 5 out of 7 address lines for long word address decoding:  effective 3 bits
 	signal REG1_ADDR : std_logic_vector(31 downto 0) ;
 	signal REG2_ADDR : std_logic_vector(31 downto 0) ;
 	signal REG3_ADDR : std_logic_vector(31 downto 0) ;
+	signal REG4_ADDR : std_logic_vector(31 downto 0) ;
+	signal REG5_ADDR : std_logic_vector(31 downto 0) ;
+	signal REG6_ADDR : std_logic_vector(31 downto 0) ;
+	signal REG7_ADDR : std_logic_vector(31 downto 0) ;
 
    type fsm_state is (IDLE_ST, SETUP_ST, WAIT_CYCLE_0_ST, WAIT_CYCLE_1_ST);
    signal fsm_st : fsm_state;
 
 begin
 	
-   MEM_ADDR <= PADDR(3 downto 0); -- split of lower 3 bits of the bus
+   MEM_ADDR <= PADDR(4 downto 2); -- split of 3 bits of the bus: lower 2 bits unused due to long word addressing.
 
    --------------
    -- FSM process
@@ -67,15 +70,21 @@ begin
 						if (PWRITE = '1') then
 							-- WRITE transfer
 							case MEM_ADDR is
-								when "0000" =>
-									REG0_ADDR  <= PWDATA;
-								when "0100" =>
+								when "001" =>					-- Byte Address 0x04 onwards are Memory Location, Adress 0x0 is reserved for Id reading only
 									REG1_ADDR  <= PWDATA;
-								when "1000" =>
+								when "010" =>
 									REG2_ADDR  <= PWDATA;									
-								when "1100" =>
+								when "011" =>
 									REG3_ADDR  <= PWDATA;		
-							end case	;		
+								when "100" =>
+									REG4_ADDR  <= PWDATA;
+								when "101" =>
+									REG5_ADDR  <= PWDATA;									
+								when "110" =>
+									REG6_ADDR  <= PWDATA;	
+								when "111" =>
+									REG7_ADDR  <= PWDATA;										
+							end case;		
 							-- WRITE transfer no wait state
 							PREADY  <= '1';
 							PSLVERR <= '0';
@@ -110,14 +119,22 @@ begin
 						-- WAIT state, READ
 						-------------------
 							case MEM_ADDR is
-								when "0000" =>
-									PRDATA <= REG0_ADDR;
-								when "0100" =>
+								when "000" =>		-- Address 0 = ID is 0xB19B00B1 - 32 bits, hard coded
+									PRDATA <= x"B19B00B1";
+								when "001" =>
 									PRDATA <= REG1_ADDR;
-								when "1000" =>
+								when "010" =>
 									PRDATA <= REG2_ADDR;									
-								when "1100" =>
-									PRDATA <= REG3_ADDR ;		
+								when "011" =>
+									PRDATA <= REG3_ADDR ;	
+								when "100" =>
+									PRDATA <= REG4_ADDR;
+								when "101" =>
+									PRDATA <= REG5_ADDR;									
+								when "110" =>
+									PRDATA <= REG6_ADDR ;	
+								when "111" =>
+									PRDATA <= REG7_ADDR ;																								
 							end case	;
 						PREADY  <= '1';
 						PSLVERR <= '0';

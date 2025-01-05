@@ -3,6 +3,9 @@
  Peripheral interface for Soft RiscV processor<br>
  Build with Lattice IP Packager<br><br>
 
+![logo](/images/Base_Circuit.jpg?raw=true)
+<BR>
+
  # Generated IPX IP libraries :<br>
  APB to Local Memory (example code for 4 memory mapped locations)<br>
  APB to PWM (dual PWM, 16bit counter, 4 registers meory mapped)<br>

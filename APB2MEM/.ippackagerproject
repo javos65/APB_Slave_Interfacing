@@ -9,7 +9,11 @@
             <file path="memory_map.xml"/>
         </filegroup>
         <filegroup filetype="rtl">
-            <file lib="" encryption="0" type="vhdl" path="rtl/ABP_top.vhd"/>
+            <file type="vhdl" lib="" path="rtl/ABP_top.vhd" encryption="0"/>
+        </filegroup>
+        <filegroup filetype="driver">
+            <file path="../localmem.c"/>
+            <file path="../localmem.h"/>
         </filegroup>
         <filegroup filetype="doc">
             <file path="doc/introduction.html"/>

@@ -6,40 +6,22 @@
         <lsccip:addressBlock>
             <lsccip:name>NewAddressBlock1</lsccip:name>
             <lsccip:baseAddress>0</lsccip:baseAddress>
-            <lsccip:range>0</lsccip:range>
-            <lsccip:width>0</lsccip:width>
+            <lsccip:range>8</lsccip:range>
+            <lsccip:width>32</lsccip:width>
             <lsccip:register>
                 <lsccip:name>NewRegister1</lsccip:name>
-                <lsccip:displayName>NewRegister1</lsccip:displayName>
-                <lsccip:description>New Register</lsccip:description>
+                <lsccip:displayName>ÏD</lsccip:displayName>
+                <lsccip:description>ID of the IP</lsccip:description>
                 <lsccip:addressOffset>0x0</lsccip:addressOffset>
                 <lsccip:size>32</lsccip:size>
                 <lsccip:volatile>true</lsccip:volatile>
                 <lsccip:access>read-write</lsccip:access>
                 <lsccip:field>
                     <lsccip:name>NewField1</lsccip:name>
-                    <lsccip:displayName>NewField1</lsccip:displayName>
-                    <lsccip:description>New RegisterField</lsccip:description>
+                    <lsccip:displayName>ID_NR</lsccip:displayName>
+                    <lsccip:description>ID_NR</lsccip:description>
                     <lsccip:bitOffset>0</lsccip:bitOffset>
-                    <lsccip:bitWidth>0</lsccip:bitWidth>
-                    <lsccip:volatile>true</lsccip:volatile>
-                    <lsccip:access>read-write</lsccip:access>
-                </lsccip:field>
-            </lsccip:register>
-            <lsccip:register>
-                <lsccip:name>NewRegister2</lsccip:name>
-                <lsccip:displayName>NewRegister2</lsccip:displayName>
-                <lsccip:description>New Register</lsccip:description>
-                <lsccip:addressOffset>0x0</lsccip:addressOffset>
-                <lsccip:size>32</lsccip:size>
-                <lsccip:volatile>true</lsccip:volatile>
-                <lsccip:access>read-write</lsccip:access>
-                <lsccip:field>
-                    <lsccip:name>NewField1</lsccip:name>
-                    <lsccip:displayName>NewField1</lsccip:displayName>
-                    <lsccip:description>New RegisterField</lsccip:description>
-                    <lsccip:bitOffset>0</lsccip:bitOffset>
-                    <lsccip:bitWidth>0</lsccip:bitWidth>
+                    <lsccip:bitWidth>32</lsccip:bitWidth>
                     <lsccip:volatile>true</lsccip:volatile>
                     <lsccip:access>read-write</lsccip:access>
                 </lsccip:field>

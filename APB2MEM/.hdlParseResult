@@ -7,10 +7,10 @@
                 <port name="rst_n_i" dir="in"/>
                 <port name="PSEL" dir="in"/>
                 <port name="PENABLE" dir="in"/>
-                <port name="PADDR" range="(7,0)" dir="in"/>
+                <port name="PADDR" dir="in" range="(7,0)"/>
                 <port name="PWRITE" dir="in"/>
-                <port name="PWDATA" range="(31,0)" dir="in"/>
-                <port name="PRDATA" range="(31,0)" dir="out"/>
+                <port name="PWDATA" dir="in" range="(31,0)"/>
+                <port name="PRDATA" dir="out" range="(31,0)"/>
                 <port name="PREADY" dir="out"/>
                 <port name="PSLVERR" dir="out"/>
             </ports>
