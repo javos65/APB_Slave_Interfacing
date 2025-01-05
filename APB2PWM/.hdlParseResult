@@ -1,20 +1,19 @@
 <?xml version="1.0"?>
 <lscc:hdlparseresult version="1.0">
     <modules>
-        <module name="apb_to_pwm">
+        <module name="apb_to_pwm4">
             <ports>
-                <port name="clk_i" dir="in"/>
-                <port name="rst_n_i" dir="in"/>
-                <port name="PSEL" dir="in"/>
-                <port name="PENABLE" dir="in"/>
-                <port name="PADDR" dir="in" range="(7,0)"/>
-                <port name="PWRITE" dir="in"/>
-                <port name="PWDATA" dir="in" range="(31,0)"/>
-                <port name="PRDATA" dir="out" range="(31,0)"/>
-                <port name="PREADY" dir="out"/>
-                <port name="PSLVERR" dir="out"/>
-                <port name="PWM0OUT" dir="out"/>
-                <port name="PWM1OUT" dir="out"/>
+                <port dir="in" name="clk_i"/>
+                <port dir="in" name="rst_n_i"/>
+                <port dir="out" name="PWMOUT" range="(3,0)"/>
+                <port dir="in" name="PSEL"/>
+                <port dir="in" name="PENABLE"/>
+                <port dir="in" name="PADDR" range="(7,0)"/>
+                <port dir="in" name="PWRITE"/>
+                <port dir="in" name="PWDATA" range="(31,0)"/>
+                <port dir="out" name="PRDATA" range="(31,0)"/>
+                <port dir="out" name="PREADY"/>
+                <port dir="out" name="PSLVERR"/>
             </ports>
         </module>
     </modules>

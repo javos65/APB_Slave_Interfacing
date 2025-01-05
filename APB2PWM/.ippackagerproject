@@ -9,8 +9,12 @@
             <file path="memory_map.xml"/>
         </filegroup>
         <filegroup filetype="rtl">
-            <file type="vhdl" lib="" path="rtl/APB2PWM_top.vhd" encryption="0"/>
-            <file type="verilog" path="rtl/led_pwm.v" encryption="0"/>
+            <file type="verilog" path="rtl/pwm16.v" encryption="0"/>
+            <file type="vhdl" lib="" path="rtl/pwm_top.vhd" encryption="0"/>
+        </filegroup>
+        <filegroup filetype="driver">
+            <file path="../c-code/pwm4.c"/>
+            <file path="../c-code/pwm4.h"/>
         </filegroup>
         <filegroup filetype="doc">
             <file path="doc/introduction.html"/>

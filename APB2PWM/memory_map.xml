@@ -10,7 +10,7 @@
             <lsccip:width>0</lsccip:width>
             <lsccip:register>
                 <lsccip:name>NewRegister1</lsccip:name>
-                <lsccip:displayName>PWM0_DC</lsccip:displayName>
+                <lsccip:displayName>NewRegister1</lsccip:displayName>
                 <lsccip:description>New Register</lsccip:description>
                 <lsccip:addressOffset>0x0</lsccip:addressOffset>
                 <lsccip:size>32</lsccip:size>
@@ -18,10 +18,10 @@
                 <lsccip:access>read-write</lsccip:access>
                 <lsccip:field>
                     <lsccip:name>NewField1</lsccip:name>
-                    <lsccip:displayName>PWM0_DC</lsccip:displayName>
+                    <lsccip:displayName>NewField1</lsccip:displayName>
                     <lsccip:description>New RegisterField</lsccip:description>
                     <lsccip:bitOffset>0</lsccip:bitOffset>
-                    <lsccip:bitWidth>32</lsccip:bitWidth>
+                    <lsccip:bitWidth>0</lsccip:bitWidth>
                     <lsccip:volatile>true</lsccip:volatile>
                     <lsccip:access>read-write</lsccip:access>
                 </lsccip:field>
