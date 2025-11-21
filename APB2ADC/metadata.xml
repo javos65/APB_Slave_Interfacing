@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<lsccip:ip xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip" xmlns:xi="http://www.w3.org/2001/XInclude" version="2.0" platform="Propel" platform_version="2024.1">
+<lsccip:ip xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip" xmlns:xi="http://www.w3.org/2001/XInclude" version="2.0" platform="Propel" platform_version="2025.1">
     <lsccip:general>
         <lsccip:vendor>JayFox</lsccip:vendor>
         <lsccip:library>my_ip</lsccip:library>
@@ -115,6 +115,9 @@
                      conn_mod="apb_to_adc"
          />
     </lsccip:ports>
+    <lsccip:outFileConfigs>
+        <lsccip:fileConfig name="wrapper" rtl_seq="ADC_fsm.v;ADCBLOCK.v;APB2ADC_top.vhd" />
+    </lsccip:outFileConfigs>
     <xi:include parse="xml" href="bus_interface.xml" />
     <xi:include parse="xml" href="memory_map.xml" />
 </lsccip:ip>

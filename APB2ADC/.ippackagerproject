@@ -9,9 +9,9 @@
             <file path="memory_map.xml"/>
         </filegroup>
         <filegroup filetype="rtl">
-            <file path="rtl/ADC_fsm.v" type="verilog" encryption="0"/>
-            <file path="rtl/ADCBLOCK.v" type="verilog" encryption="0"/>
-            <file path="rtl/APB2ADC_top.vhd" lib="" type="vhdl" encryption="0"/>
+            <file encryption="0" path="rtl/ADC_fsm.v" type="verilog"/>
+            <file encryption="0" path="rtl/ADCBLOCK.v" type="verilog"/>
+            <file encryption="0" lib="" path="rtl/APB2ADC_top.vhd" type="vhdl"/>
         </filegroup>
         <filegroup filetype="driver">
             <file path="../c-files/nexus_adc.c"/>
@@ -21,7 +21,7 @@
             <file path="doc/introduction.html"/>
         </filegroup>
         <filegroup filetype="key">
-            <file path="../../../../../lscc/propel/2024.1/builder/rtf/ispfpga/data/key.txt"/>
+            <file path="../../../../../../lscc/propel/2025.1/builder/rtf/ispfpga/data/key.txt"/>
         </filegroup>
         <filegroup filetype="eula">
             <file path="doc/EULA.txt"/>

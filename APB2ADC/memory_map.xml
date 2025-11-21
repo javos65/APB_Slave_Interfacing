@@ -2,6 +2,7 @@
 <lsccip:memoryMaps xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
     <lsccip:memoryMap>
         <lsccip:name>NewMemmap1</lsccip:name>
+        <lsccip:displayName>NewMemmap1</lsccip:displayName>
         <lsccip:description>New Memorymap</lsccip:description>
         <lsccip:addressBlock>
             <lsccip:name>NewAddressBlock1</lsccip:name>

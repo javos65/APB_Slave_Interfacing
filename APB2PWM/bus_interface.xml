@@ -1,8 +1,8 @@
 
 <lsccip:busInterfaces xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
     <lsccip:busInterface>
-        <lsccip:name>APB_S0</lsccip:name>
-        <lsccip:displayName>APB_S0</lsccip:displayName>
+        <lsccip:name>APB_PWM</lsccip:name>
+        <lsccip:displayName>APB_PWM</lsccip:displayName>
         <lsccip:description></lsccip:description>
         <lsccip:busType vendor="amba.com" library="AMBA3" name="APB" version="r1p0"/>
         <lsccip:abstractionTypes>
@@ -77,7 +77,7 @@
             </lsccip:abstractionType>
         </lsccip:abstractionTypes>
         <lsccip:slave>
-            <lsccip:memoryMapRef memoryMapRef="NewMemmap1"/>
+            <lsccip:memoryMapRef memoryMapRef="PWM"/>
         </lsccip:slave>
     </lsccip:busInterface>
 </lsccip:busInterfaces>

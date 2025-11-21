@@ -127,7 +127,9 @@ begin
 								when "011" =>
 									REG2_ADDR  <= PWDATA;									
 								when "100" =>
-									REG3_ADDR  <= PWDATA;		
+									REG3_ADDR  <= PWDATA;	
+								when others => 
+									null;			
 							end case	;		
 							-- WRITE transfer no wait state
 							PREADY  <= '1';
@@ -174,7 +176,7 @@ begin
 								when "100" =>
 									PRDATA <= REG3_ADDR ;	
 								when others =>
-									PRDATA <= x"00000000";		
+									PRDATA <= x"00000000";	
 							end case	;
 						PREADY  <= '1';
 						PSLVERR <= '0';

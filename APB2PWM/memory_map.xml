@@ -1,16 +1,91 @@
 
 <lsccip:memoryMaps xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
     <lsccip:memoryMap>
-        <lsccip:name>NewMemmap1</lsccip:name>
+        <lsccip:name>PWM</lsccip:name>
+        <lsccip:displayName>NewMemmap1</lsccip:displayName>
         <lsccip:description>New Memorymap</lsccip:description>
         <lsccip:addressBlock>
             <lsccip:name>NewAddressBlock1</lsccip:name>
+            <lsccip:displayName>NewAddressBlock1</lsccip:displayName>
+            <lsccip:description>NewAddressBlock1</lsccip:description>
             <lsccip:baseAddress>0</lsccip:baseAddress>
             <lsccip:range>0</lsccip:range>
             <lsccip:width>0</lsccip:width>
             <lsccip:register>
-                <lsccip:name>NewRegister1</lsccip:name>
-                <lsccip:displayName>NewRegister1</lsccip:displayName>
+                <lsccip:name>ID</lsccip:name>
+                <lsccip:displayName>ID</lsccip:displayName>
+                <lsccip:description>New Register</lsccip:description>
+                <lsccip:addressOffset>0x0</lsccip:addressOffset>
+                <lsccip:size>32</lsccip:size>
+                <lsccip:volatile>true</lsccip:volatile>
+                <lsccip:access>read-write</lsccip:access>
+                <lsccip:field>
+                    <lsccip:name>NewField1</lsccip:name>
+                    <lsccip:displayName>NewField1</lsccip:displayName>
+                    <lsccip:description>New RegisterField</lsccip:description>
+                    <lsccip:bitOffset>0</lsccip:bitOffset>
+                    <lsccip:bitWidth>0</lsccip:bitWidth>
+                    <lsccip:volatile>true</lsccip:volatile>
+                    <lsccip:access>read-write</lsccip:access>
+                </lsccip:field>
+            </lsccip:register>
+            <lsccip:register>
+                <lsccip:name>PWM0</lsccip:name>
+                <lsccip:displayName>PWM0</lsccip:displayName>
+                <lsccip:description>New Register</lsccip:description>
+                <lsccip:addressOffset>0x04</lsccip:addressOffset>
+                <lsccip:size>32</lsccip:size>
+                <lsccip:volatile>true</lsccip:volatile>
+                <lsccip:access>read-write</lsccip:access>
+                <lsccip:field>
+                    <lsccip:name>NewField1</lsccip:name>
+                    <lsccip:displayName>NewField1</lsccip:displayName>
+                    <lsccip:description>New RegisterField</lsccip:description>
+                    <lsccip:bitOffset>0</lsccip:bitOffset>
+                    <lsccip:bitWidth>0</lsccip:bitWidth>
+                    <lsccip:volatile>true</lsccip:volatile>
+                    <lsccip:access>read-write</lsccip:access>
+                </lsccip:field>
+            </lsccip:register>
+            <lsccip:register>
+                <lsccip:name>PWM1</lsccip:name>
+                <lsccip:displayName>PWM1</lsccip:displayName>
+                <lsccip:description>New Register</lsccip:description>
+                <lsccip:addressOffset>0x0</lsccip:addressOffset>
+                <lsccip:size>32</lsccip:size>
+                <lsccip:volatile>true</lsccip:volatile>
+                <lsccip:access>read-write</lsccip:access>
+                <lsccip:field>
+                    <lsccip:name>NewField1</lsccip:name>
+                    <lsccip:displayName>NewField1</lsccip:displayName>
+                    <lsccip:description>New RegisterField</lsccip:description>
+                    <lsccip:bitOffset>0</lsccip:bitOffset>
+                    <lsccip:bitWidth>0</lsccip:bitWidth>
+                    <lsccip:volatile>true</lsccip:volatile>
+                    <lsccip:access>read-write</lsccip:access>
+                </lsccip:field>
+            </lsccip:register>
+            <lsccip:register>
+                <lsccip:name>PWM2</lsccip:name>
+                <lsccip:displayName>PWM2</lsccip:displayName>
+                <lsccip:description>New Register</lsccip:description>
+                <lsccip:addressOffset>0x0</lsccip:addressOffset>
+                <lsccip:size>32</lsccip:size>
+                <lsccip:volatile>true</lsccip:volatile>
+                <lsccip:access>read-write</lsccip:access>
+                <lsccip:field>
+                    <lsccip:name>NewField1</lsccip:name>
+                    <lsccip:displayName>NewField1</lsccip:displayName>
+                    <lsccip:description>New RegisterField</lsccip:description>
+                    <lsccip:bitOffset>0</lsccip:bitOffset>
+                    <lsccip:bitWidth>0</lsccip:bitWidth>
+                    <lsccip:volatile>true</lsccip:volatile>
+                    <lsccip:access>read-write</lsccip:access>
+                </lsccip:field>
+            </lsccip:register>
+            <lsccip:register>
+                <lsccip:name>PWM3</lsccip:name>
+                <lsccip:displayName>PWM3</lsccip:displayName>
                 <lsccip:description>New Register</lsccip:description>
                 <lsccip:addressOffset>0x0</lsccip:addressOffset>
                 <lsccip:size>32</lsccip:size>
