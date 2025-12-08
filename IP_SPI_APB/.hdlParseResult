@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<lscc:hdlparseresult version="1.0">
+    <modules>
+        <module name="apb_to_spi">
+            <ports>
+                <port dir="in" name="clk_i"/>
+                <port dir="in" name="rst_n_i"/>
+                <port dir="in" name="sclk_i"/>
+                <port dir="in" name="PSEL"/>
+                <port dir="in" name="PENABLE"/>
+                <port dir="in" name="PADDR" range="(7,0)"/>
+                <port dir="in" name="PWRITE"/>
+                <port dir="in" name="PWDATA" range="(31,0)"/>
+                <port dir="out" name="PRDATA" range="(31,0)"/>
+                <port dir="out" name="PREADY"/>
+                <port dir="out" name="PSLVERR"/>
+                <port dir="out" name="SCLK"/>
+                <port dir="out" name="DC"/>
+                <port dir="out" name="CS"/>
+                <port dir="out" name="SDIN"/>
+                <port dir="out" name="RST"/>
+            </ports>
+        </module>
+    </modules>
+</lscc:hdlparseresult>

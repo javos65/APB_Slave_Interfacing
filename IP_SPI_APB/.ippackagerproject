@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ippackgerproject version="1.0">
+    <filegroups>
+        <filegroup filetype="metadata">
+            <file path="metadata.xml"/>
+        </filegroup>
+        <filegroup filetype="sub_metadata">
+            <file path="bus_interface.xml"/>
+            <file path="memory_map.xml"/>
+        </filegroup>
+        <filegroup filetype="rtl">
+            <file encryption="0" lib="" path="rtl/spi_oled.vhd" type="vhdl"/>
+            <file encryption="0" lib="" path="rtl/spi_oled_top.vhd" type="vhdl"/>
+        </filegroup>
+        <filegroup filetype="driver">
+            <file path="driver/ssd1351.c"/>
+            <file path="driver/ssd1351.h"/>
+            <file path="driver/font_4bbp.h"/>
+            <file path="driver/font_4bpp.c"/>
+        </filegroup>
+        <filegroup filetype="doc">
+            <file path="doc/EULA.txt"/>
+            <file path="doc/introduction.html"/>
+        </filegroup>
+        <filegroup filetype="key">
+            <file path="../../../../lscc/propel/2025.1/builder/rtf/ispfpga/data/key.txt"/>
+        </filegroup>
+        <filegroup filetype="eula">
+            <file path="doc/EULA.txt"/>
+        </filegroup>
+    </filegroups>
+</ippackgerproject>

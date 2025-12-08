@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<RadiantModule architecture="ice40tp" date="2025 12 08 21:09:07" device="iCE40UP3K" device_int="itpa08" display_module="SPI_4wire" display_vendor="JVos" family="iCE40UP" gen_platform="Propel" gen_platform_version="2025.1.0.2509231446_sp1" generator="ipgen" library="ip" module="SPI_4wire" name="SPI_4wire_inst" operation="Industrial" package="FWG49" package_int="FWG49" partnumber="iCE40UP3K-FWG49ITR" source_format="Verilog" speed="High-Performance_1.2V" speed_int="6" vendor="JVos" version="2.0.1">
+ <Package>
+  <File modified="2025 12 08 21:09:07" name="rtl/SPI_4wire_inst_bb.v" type="black_box_verilog"/>
+  <File modified="2025 12 08 21:09:07" name="SPI_4wire_inst.cfg" type="cfg"/>
+  <File modified="2025 12 08 21:09:07" name="misc/SPI_4wire_inst_tmpl.v" type="template_verilog"/>
+  <File modified="2025 12 08 21:09:07" name="misc/SPI_4wire_inst_tmpl.vhd" type="template_vhdl"/>
+  <File modified="2025 12 08 21:09:07" name="rtl/SPI_4wire_inst.v" type="top_level_verilog"/>
+  <File modified="2025 12 08 21:09:07" name="rtl/SPI_4wire_inst_globals.v" type="core_verilog"/>
+  <File modified="2025 12 08 21:08:57" name="rtl/spi_oled.vhd" type="core_vhdl"/>
+  <File modified="2025 12 08 21:08:57" name="rtl/spi_oled_top.vhd" type="core_vhdl"/>
+  <File modified="2025 12 08 21:09:07" name="component.xml" type="IP-XACT_component"/>
+  <File modified="2025 12 08 21:09:07" name="design.xml" type="IP-XACT_design"/>
+  <File modified="2025 12 08 20:08:57" name="driver/font_4bbp.h" type="driver_header"/>
+  <File modified="2025 12 08 20:08:57" name="driver/font_4bpp.c" type="driver_source"/>
+  <File modified="2025 12 08 20:08:57" name="driver/ssd1351.c" type="driver_source"/>
+  <File modified="2025 12 08 20:08:57" name="driver/ssd1351.h" type="driver_header"/>
+ </Package>
+</RadiantModule>

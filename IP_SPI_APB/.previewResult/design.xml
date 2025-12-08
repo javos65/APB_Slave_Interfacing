@@ -1,0 +1,171 @@
+<?xml version="1.0" ?>
+<ipxact:design xmlns:ipxact="http://www.accellera.org/XMLSchema/IPXACT/1685-2014" xmlns:lattice="http://www.latticesemi.com/lattice" xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
+    <ipxact:vendor>JVos</ipxact:vendor>
+    <ipxact:library>ip</ipxact:library>
+    <ipxact:name>SPI_4wire_inst</ipxact:name>
+    <ipxact:version>2.0.1</ipxact:version>
+    <ipxact:componentInstances>
+        <ipxact:componentInstance>
+            <ipxact:instanceName>apb_to_spi_inst</ipxact:instanceName>
+            <ipxact:componentRef library="ip" name="SPI_4wire" vendor="JVos" version="2.0.1">
+                <ipxact:configurableElementValues/>
+            </ipxact:componentRef>
+        </ipxact:componentInstance>
+    </ipxact:componentInstances>
+    <ipxact:adHocConnections>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.clk_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="clk_i"/>
+                <ipxact:externalPortReference portRef="clk_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.rst_n_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="rst_n_i"/>
+                <ipxact:externalPortReference portRef="rst_n_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.sclk_i</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="sclk_i"/>
+                <ipxact:externalPortReference portRef="sclk_i"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.PSEL</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="PSEL"/>
+                <ipxact:externalPortReference portRef="PSEL"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.PENABLE</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="PENABLE"/>
+                <ipxact:externalPortReference portRef="PENABLE"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.PADDR.7:0</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="PADDR">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>7</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:internalPortReference>
+                <ipxact:externalPortReference portRef="PADDR">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>7</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.PWRITE</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="PWRITE"/>
+                <ipxact:externalPortReference portRef="PWRITE"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.PWDATA.31:0</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="PWDATA">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>31</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:internalPortReference>
+                <ipxact:externalPortReference portRef="PWDATA">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>31</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.PRDATA.31:0</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="PRDATA">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>31</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:internalPortReference>
+                <ipxact:externalPortReference portRef="PRDATA">
+                    <ipxact:partSelect>
+                        <ipxact:range>
+                            <ipxact:left>31</ipxact:left>
+                            <ipxact:right>0</ipxact:right>
+                        </ipxact:range>
+                    </ipxact:partSelect>
+                </ipxact:externalPortReference>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.PREADY</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="PREADY"/>
+                <ipxact:externalPortReference portRef="PREADY"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.PSLVERR</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="PSLVERR"/>
+                <ipxact:externalPortReference portRef="PSLVERR"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.SCLK</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="SCLK"/>
+                <ipxact:externalPortReference portRef="SCLK"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.DC</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="DC"/>
+                <ipxact:externalPortReference portRef="DC"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.CS</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="CS"/>
+                <ipxact:externalPortReference portRef="CS"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.SDIN</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="SDIN"/>
+                <ipxact:externalPortReference portRef="SDIN"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+        <ipxact:adHocConnection>
+            <ipxact:name>SPI_4wire_inst.RST</ipxact:name>
+            <ipxact:portReferences>
+                <ipxact:internalPortReference componentRef="SPI_4wire_inst" portRef="RST"/>
+                <ipxact:externalPortReference portRef="RST"/>
+            </ipxact:portReferences>
+        </ipxact:adHocConnection>
+    </ipxact:adHocConnections>
+</ipxact:design>

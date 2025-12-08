@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<lsccip:ip xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip" xmlns:xi="http://www.w3.org/2001/XInclude" version="2.0" platform="Propel" platform_version="2025.1">
+    <lsccip:general>
+        <lsccip:vendor>JVos</lsccip:vendor>
+        <lsccip:library>ip</lsccip:library>
+        <lsccip:name>SPI_4wire</lsccip:name>
+        <lsccip:display_name>SPI_4wire</lsccip:display_name>
+        <lsccip:version>2.0.1</lsccip:version>
+        <lsccip:category />
+        <lsccip:keywords>SPI, oled</lsccip:keywords>
+        <lsccip:type>peripheral</lsccip:type>
+        <lsccip:min_radiant_version>2025.1</lsccip:min_radiant_version>
+        <lsccip:min_esi_version>2025.1</lsccip:min_esi_version>
+        <lsccip:supported_products>
+            <lsccip:supported_family name="*" />
+        </lsccip:supported_products>
+        <lsccip:supported_platforms>
+            <lsccip:supported_platform name="esi" />
+            <lsccip:supported_platform name="radiant" />
+        </lsccip:supported_platforms>
+    </lsccip:general>
+    <lsccip:settings>
+        <lsccip:setting id="__dummy__"
+                        type="param"
+                        value_type="string"
+                        conn_mod="apb_to_spi"
+                        hidden="True"
+         />
+    </lsccip:settings>
+    <lsccip:ports>
+        <lsccip:port name="clk_i"
+                     dir="in"
+                     conn_mod="apb_to_spi"
+         />
+        <lsccip:port name="rst_n_i"
+                     dir="in"
+                     conn_mod="apb_to_spi"
+         />
+        <lsccip:port name="sclk_i"
+                     dir="in"
+                     conn_mod="apb_to_spi"
+         />
+        <lsccip:port name="PSEL"
+                     dir="in"
+                     conn_mod="apb_to_spi"
+                     bus_interface="APB_S0"
+         />
+        <lsccip:port name="PENABLE"
+                     dir="in"
+                     conn_mod="apb_to_spi"
+                     bus_interface="APB_S0"
+         />
+        <lsccip:port name="PADDR"
+                     dir="in"
+                     conn_mod="apb_to_spi"
+                     range="(7,0)"
+                     bus_interface="APB_S0"
+         />
+        <lsccip:port name="PWRITE"
+                     dir="in"
+                     conn_mod="apb_to_spi"
+                     bus_interface="APB_S0"
+         />
+        <lsccip:port name="PWDATA"
+                     dir="in"
+                     conn_mod="apb_to_spi"
+                     range="(31,0)"
+                     bus_interface="APB_S0"
+         />
+        <lsccip:port name="PRDATA"
+                     dir="out"
+                     conn_mod="apb_to_spi"
+                     range="(31,0)"
+                     bus_interface="APB_S0"
+         />
+        <lsccip:port name="PREADY"
+                     dir="out"
+                     conn_mod="apb_to_spi"
+                     bus_interface="APB_S0"
+         />
+        <lsccip:port name="PSLVERR"
+                     dir="out"
+                     conn_mod="apb_to_spi"
+                     bus_interface="APB_S0"
+         />
+        <lsccip:port name="SCLK"
+                     dir="out"
+                     conn_mod="apb_to_spi"
+         />
+        <lsccip:port name="DC"
+                     dir="out"
+                     conn_mod="apb_to_spi"
+         />
+        <lsccip:port name="CS"
+                     dir="out"
+                     conn_mod="apb_to_spi"
+         />
+        <lsccip:port name="SDIN"
+                     dir="out"
+                     conn_mod="apb_to_spi"
+         />
+        <lsccip:port name="RST"
+                     dir="out"
+                     conn_mod="apb_to_spi"
+         />
+    </lsccip:ports>
+    <lsccip:outFileConfigs>
+        <lsccip:fileConfig name="wrapper" rtl_seq="spi_oled.vhd;spi_oled_top.vhd" />
+    </lsccip:outFileConfigs>
+    <xi:include parse="xml" href="bus_interface.xml" />
+    <xi:include parse="xml" href="memory_map.xml" />
+</lsccip:ip>

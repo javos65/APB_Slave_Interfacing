@@ -1,0 +1,34 @@
+
+<lsccip:memoryMaps xmlns:lsccip="http://www.latticesemi.com/XMLSchema/Radiant/ip">
+    <lsccip:memoryMap>
+        <lsccip:name>SPI</lsccip:name>
+        <lsccip:displayName>SPI</lsccip:displayName>
+        <lsccip:description>New Memorymap</lsccip:description>
+        <lsccip:addressBlock>
+            <lsccip:name>SPI_Block</lsccip:name>
+            <lsccip:displayName>NewAddressBlock1</lsccip:displayName>
+            <lsccip:description>NewAddressBlock1</lsccip:description>
+            <lsccip:baseAddress>0</lsccip:baseAddress>
+            <lsccip:range>0</lsccip:range>
+            <lsccip:width>0</lsccip:width>
+            <lsccip:register>
+                <lsccip:name>NewRegister1</lsccip:name>
+                <lsccip:displayName>NewRegister1</lsccip:displayName>
+                <lsccip:description>New Register</lsccip:description>
+                <lsccip:addressOffset>0x0</lsccip:addressOffset>
+                <lsccip:size>32</lsccip:size>
+                <lsccip:volatile>true</lsccip:volatile>
+                <lsccip:access>read-write</lsccip:access>
+                <lsccip:field>
+                    <lsccip:name>NewField1</lsccip:name>
+                    <lsccip:displayName>NewField1</lsccip:displayName>
+                    <lsccip:description>New RegisterField</lsccip:description>
+                    <lsccip:bitOffset>0</lsccip:bitOffset>
+                    <lsccip:bitWidth>0</lsccip:bitWidth>
+                    <lsccip:volatile>true</lsccip:volatile>
+                    <lsccip:access>read-write</lsccip:access>
+                </lsccip:field>
+            </lsccip:register>
+        </lsccip:addressBlock>
+    </lsccip:memoryMap>
+</lsccip:memoryMaps>
